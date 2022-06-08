@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "525965777426",
+    "firebase_url": "https://course-mobile-technology-2022-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "course-mobile-technology-2022",
+    "storage_bucket": "course-mobile-technology-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525965777426:android:5c42ccff2e7c570a7416cb",
+        "android_client_info": {
+          "package_name": "com.addin.publicchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525965777426-76jn8i90d4ukut9o7mit9kp86jqdkjol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwmD2Xiu6JjchbnsNn0yfhGUkv6U5urUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525965777426-76jn8i90d4ukut9o7mit9kp86jqdkjol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

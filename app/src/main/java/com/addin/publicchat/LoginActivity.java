@@ -25,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private FirebaseUser user;
     String TAG = "LOGIN ACTIVITY";
 
 
@@ -41,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // User is signed in
             Log.w("USER", user.getEmail());
@@ -65,6 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            Log.w("USER", user.getEmail());
                             goToMainApp();
                         } else {
                             Toast.makeText(LoginActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,9 +42,8 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-
-
         mAuth = FirebaseAuth.getInstance();
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         etMessage = findViewById(R.id.et_message);
@@ -53,7 +53,7 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatabaseReference newMessageRef = database.getReference("/messages");
-                Message newMessage = new Message(etMessage.getText().toString(), mAuth.getUid(), System.currentTimeMillis());
+                Message newMessage = new Message(etMessage.getText().toString(), mAuth.getUid(), System.currentTimeMillis(), mAuth.getCurrentUser().getEmail());
                 newMessageRef.push().setValue(newMessage);
 
                 etMessage.setText("");
@@ -61,19 +61,21 @@ public class ChatActivity extends AppCompatActivity {
         });
 
 
+        // Membuat adapter pesan dengan data pesan kosong
         messagesAdapter = new MessagesAdapter(messages, this);
 
+        // Menghubungkan recycler view dengan adapter
         RecyclerView rvMessages = (RecyclerView) findViewById(R.id.rv_messages);
         rvMessages.setAdapter(messagesAdapter);
         // Set layout manager to position the items
         rvMessages.setLayoutManager(new LinearLayoutManager(this));
 
-
+        // Start ----- Baca daftar pesan
         DatabaseReference messagesRef = database.getReference("/messages");
-
         messagesRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                // Menambahkan data pesan baru ke adapter pada saat pesan baru ditambahkan ke database
                 Message newMessage = snapshot.getValue(Message.class);
                 messagesAdapter.addItem(newMessage);
             }
@@ -98,6 +100,7 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
+        // End ---- Baca daftar pesan
 
 
 //        Button btnLogout = findViewById(R.id.btn_logout);

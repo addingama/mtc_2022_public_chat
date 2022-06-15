@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.addin.publicchat.R;
 import com.addin.publicchat.models.Message;
+import com.addin.publicchat.models.User;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -19,6 +22,7 @@ import java.util.List;
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHolder> {
     private List<Message> mMessages;
     private Context mContext;
+
 
     public MessagesAdapter(List<Message> mMessages, Context mContext) {
         this.mMessages = mMessages;
@@ -49,7 +53,8 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
 
         // Set item views based on your views and data model
        holder.tvMessage.setText(message.getMessage());
-       holder.tvName.setText(message.getUid());
+
+       holder.tvName.setText(message.getFullName());
 
 
         Timestamp timestamp = new Timestamp(message.getCreatedAt());

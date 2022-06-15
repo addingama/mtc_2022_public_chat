@@ -43,6 +43,7 @@ public class ChatActivity extends AppCompatActivity {
 
 
 
+        mAuth = FirebaseAuth.getInstance();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         etMessage = findViewById(R.id.et_message);
@@ -52,14 +53,14 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatabaseReference newMessageRef = database.getReference("/messages");
-                Message newMessage = new Message(etMessage.getText().toString(), "xxxxx", 1231231.00);
+                Message newMessage = new Message(etMessage.getText().toString(), mAuth.getUid(), System.currentTimeMillis());
                 newMessageRef.push().setValue(newMessage);
 
                 etMessage.setText("");
             }
         });
 
-        mAuth = FirebaseAuth.getInstance();
+
         messagesAdapter = new MessagesAdapter(messages, this);
 
         RecyclerView rvMessages = (RecyclerView) findViewById(R.id.rv_messages);

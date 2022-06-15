@@ -41,7 +41,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:hint="14 Maret 2022 08:00"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"

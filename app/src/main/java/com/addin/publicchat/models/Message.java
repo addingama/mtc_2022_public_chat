@@ -3,12 +3,12 @@ package com.addin.publicchat.models;
 public class Message {
     private String message;
     private String uid;
-    private Double createdAt;
+    private Long createdAt;
 
     public Message() {
     }
 
-    public Message(String message, String uid, Double createdAt) {
+    public Message(String message, String uid, Long createdAt) {
         this.message = message;
         this.uid = uid;
         this.createdAt = createdAt;
@@ -30,11 +30,11 @@ public class Message {
         this.uid = uid;
     }
 
-    public Double getCreatedAt() {
+    public Long getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Double createdAt) {
+    public void setCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
     }
 }

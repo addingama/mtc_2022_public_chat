@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.addin.publicchat.R;
 import com.addin.publicchat.models.Message;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHolder> {
@@ -48,7 +50,11 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
         // Set item views based on your views and data model
        holder.tvMessage.setText(message.getMessage());
        holder.tvName.setText(message.getUid());
-       holder.tvCreated.setText(message.getCreatedAt() + "");
+
+
+        Timestamp timestamp = new Timestamp(message.getCreatedAt());
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+       holder.tvCreated.setText(dateFormatter.format(timestamp));
     }
 
     @Override

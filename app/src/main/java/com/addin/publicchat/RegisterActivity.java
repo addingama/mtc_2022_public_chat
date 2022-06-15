@@ -53,9 +53,11 @@ public class RegisterActivity extends AppCompatActivity {
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference myRef = database.getReference("/");
 
+                            String uid = task.getResult().getUser().getUid();
+
                             User user = new User(name, email);
 
-                            myRef.child("users").push().setValue(user);
+                            myRef.child("users/" + uid).setValue(user);
 
                         } else {
                             // If sign in fails, display a message to the user.

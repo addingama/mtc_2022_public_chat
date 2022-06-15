@@ -7,6 +7,7 @@
     tools:context=".ChatActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -23,8 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Tulis pesan Anda..." />
+            android:hint="Tulis pesan Anda..."
+            android:inputType="textPersonName" />
 
         <ImageButton
             android:id="@+id/ib_send"
@@ -33,4 +34,14 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_baseline_send_24" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

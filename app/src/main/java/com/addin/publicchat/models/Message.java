@@ -5,6 +5,9 @@ public class Message {
     private String uid;
     private Double createdAt;
 
+    public Message() {
+    }
+
     public Message(String message, String uid, Double createdAt) {
         this.message = message;
         this.uid = uid;

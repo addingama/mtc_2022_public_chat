@@ -14,6 +14,15 @@ Youtube: [link](https://youtube.com)
 2. Fitur 2
 
 
+#### Screenshots
+
+1. Halaman messages
+   ![Messages screen](screenshots/messages_screen.png?raw=true)
+
+2. Halaman login
+   ![Login screen](screenshots/login_screen.png?raw=true)
+
+
 #### TODO
 
 1. Handle refresh chat list setelah send

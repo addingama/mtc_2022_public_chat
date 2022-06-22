@@ -1,0 +1,88 @@
+{
+  "messages": {
+    "-N4_8X21Ld7AXF6T1sbc": {
+      "createdAt": 1655259405078,
+      "message": "test",
+      "name": "",
+      "uid": "CMgYue1m1KZWRMthc952aEwWQZF2"
+    },
+    "-N4_8jN0GDClyZr5CsMX": {
+      "createdAt": 1655259459734,
+      "fullName": "",
+      "message": "test as",
+      "uid": "CMgYue1m1KZWRMthc952aEwWQZF2"
+    },
+    "-N4_97w6qgXECnZe1bmi": {
+      "createdAt": 1655259564378,
+      "fullName": "addingama@gmail.com",
+      "message": "addin",
+      "uid": "CMgYue1m1KZWRMthc952aEwWQZF2"
+    },
+    "-N4_9Wj2shHnJK1rYSYh": {
+      "createdAt": 1655259665945,
+      "fullName": "addingama@gmail.com",
+      "message": "pesan",
+      "uid": "CMgYue1m1KZWRMthc952aEwWQZF2"
+    },
+    "-N4_9vGOy1z32lUwPJ9f": {
+      "createdAt": 1655259770546,
+      "fullName": "addingama@gmail.com",
+      "message": "tambah",
+      "uid": "CMgYue1m1KZWRMthc952aEwWQZF2"
+    },
+    "-N4_NzjBXxCmIMifc86g": {
+      "a": "Danil aziz",
+      "b": 1655263460186,
+      "c": "danilaziz548@gmail.com"
+    },
+    "-N4_O0TxtqxW0BzZ5517": {
+      "a": "Danil aziz",
+      "b": 1655263467335,
+      "c": "danilaziz548@gmail.com"
+    },
+    "-N4_UrtuXWMmoYqqFID5": {
+      "a": "",
+      "b": 1655265247091,
+      "c": "nanawithlove40@gmail.com"
+    },
+    "-N4_f_Aa-mnhlmaoDH8G": {
+      "a": "tes",
+      "b": 1655268332262,
+      "c": "nanawithlove40@gmail.com"
+    }
+  },
+  "users": {
+    "3haJSMaAaRWwd4GdSr9avCDhuIu1": {
+      "d": "Ahmad Muzakkir",
+      "e": "agusjuliadi322@gmail.com"
+    },
+    "49S1kJwrqeY8d7fqFTMlF60JM3y2": {
+      "d": "Asmawi_ AweTH",
+      "e": "nanawithlove40@gmail.com"
+    },
+    "AFbJYfDb8iUSWC6tN9Tgi154hgB3": {
+      "d": "Danil Aziz ",
+      "e": "danilaziz548@gmail.com"
+    },
+    "CMgYue1m1KZWRMthc952aEwWQZF2": {
+      "email": "addingama@gmail.com",
+      "name": "Addin"
+    },
+    "LkM5DJc0jKYxUgVrYMDZhMzM7jG2": {
+      "d": "Muammar Kadapi ",
+      "e": "muammarkadapi@gmail.com"
+    },
+    "XuRLuDPZGnThTmQKEw40dfzsuwJ3": {
+      "d": "Wahid",
+      "e": "mwahidromidali@gmail.com"
+    },
+    "pI9Lb3A3duYvijnZni1EJMNMX1y2": {
+      "d": "Ahmad Muzakkir",
+      "e": "ahmadmuza@gmail.com"
+    },
+    "pxUjS4OD9LadLFQWlqzLbiIJSJk2": {
+      "d": "sintia",
+      "e": "sintiiaqurniawati@gmail.com"
+    }
+  }
+}
